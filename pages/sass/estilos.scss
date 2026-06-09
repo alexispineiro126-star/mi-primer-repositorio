@@ -1,0 +1,14 @@
+@use './navbar';
+@use './imagenes';
+@use './mixin';
+@use './footer';
+@use './videos';
+@use './cajas';
+@use './variables';
+
+*{
+    box-sizing: border-box;
+    font-family: 'Almendra', serif;
+    margin: 0;
+    padding: 0;
+}
