@@ -1,0 +1,31 @@
+@use './variables';
+@use './mixin';
+.perfume{
+    position: absolute;
+    bottom: 10%;
+    left: 100px;
+    background-color: transparent;
+    z-index: 9;
+    padding: 3px 20px;
+    border: 2px solid variables.$yellow-accent;
+    border-radius: 5px;
+        }
+.buton{
+    text-decoration: none;
+    color: variables.$yellow-accent;
+}
+
+@media screen and (max-width:600px) {
+    .perfume{
+        padding: 3px 6px;
+        font-size: 14px;
+        position: absolute;
+        bottom: 10%;
+        left: 7%;
+        
+    }
+}
+
+
+
+

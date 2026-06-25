@@ -2,6 +2,7 @@
     background: #000;
 }
 .video-container{
+    position: relative;
     width: 400px;
     height: 755px;
     margin: 5px auto;
@@ -29,3 +30,38 @@
         height: 90vh;
     }
 }
+
+.acciones{
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    .corazon{
+        font-size: 23px;
+        color: aliceblue;
+        background: transparent;
+        border: none;
+    }
+    }
+    .corazon:active{
+        animation: corazon 0.4s ease;
+        font-size: 28px;
+    }
+
+    @keyframes corazon {
+        0%{
+            transform: scale(1);
+        }
+        25%{
+            transform: scale(1.2);
+        }
+        50%{
+            transform: scale(1.4);
+        }
+        75%{
+            transform: scale(1.2);
+        }
+        100%{
+            transform: scale(1);
+        }
+    }

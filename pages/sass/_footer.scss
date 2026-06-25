@@ -1,16 +1,19 @@
-@use'./variables';
+
 
 .footer{ 
-    background-color:variables.$variable-blue;
+    background-color:#000;
+    box-sizing: border-box;
+    display: flex;
     color: #0913e1;
-    text-align: center;
     .logo{
             width: 64px;
             height: 64px;
             margin: 5px;
         }
         .copy{
-            font-size: 18px;
-            margin: 5px ;
+            font-size: 10px;
+            margin: auto;
+            color: aliceblue;
+            text-align: center;
     }
 }

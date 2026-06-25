@@ -1,0 +1,55 @@
+
+.boton{
+    position: absolute;
+    top: 60%;
+    left: 160px;
+    color: bisque;
+    background-color: transparent;
+    z-index: 9;
+    padding: 3px 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: calc(-100% - 25px);
+            width: 100%;
+            border-bottom: 30px #1e032d solid;
+            border-right: 26px transparent solid;
+            z-index: 8;
+            transition: 1s ease-in-out all;
+        }
+        &:hover::after {
+            left: 0;
+        }
+        &:hover {
+            color: rgb(24, 24, 24);
+        }
+    .buton {
+        position: relative;
+        display: inline-block;
+        color: rgb(245, 245, 248);
+        text-decoration: none;
+        z-index: 9;
+    }
+}
+
+
+@media screen and (max-width:600px){
+    .boton{
+        left: 110px;
+    }
+}
+.boton-violet{
+    position: absolute;
+    padding: 3px 10px;
+    border-radius: 5px;
+    background-color: #a86ec9;
+    border: none;
+    left: 5%;
+    color: azure;
+    top: 60%;
+}
+
+

@@ -1,6 +1,8 @@
 @use "mixin";
 @use './variables';
 
+
+//pagina principal
 .contenedor{
     background-color: variables.$variable-blue;
     position: sticky;
@@ -9,19 +11,19 @@
     z-index: 10;
     @include mixin.flex-center;
     .subtitulo{
-        font-size: 16px;
+        font-size: 14px;
         margin-top: 20px;
         color: aliceblue;
         
     }
     .logo{
-        width: 64px;
-        height: 64px;
+        width: 60px;
+        height: 60px;
         margin: 5px;
     }
     .bi{
         padding-right: 5px;
-        color: aliceblue;
+        color: white;
     }
     .nav{
         width: 60%;
@@ -35,14 +37,14 @@
             .nav-link{
                 padding: 5px;
                 margin-top: 20px;
-                color: #fff;
+                color: white;
                 &.activo{
-                    border-bottom: 2px solid variables.$varibles-azul;
-                    color:variables.$varibles-azul;
+                    border-bottom: 2px solid  rgb(167, 43, 250);
+                    color: white;
                 }
                 }
                 .nav-link:hover{
-                    text-decoration:variables.$variables-azul 2px underline;
+                    text-decoration: rgb(169, 9, 249) 2px underline;
                 }
             }
         }
@@ -56,8 +58,9 @@
             .dropdown-item{
                 color: rgb(244, 238, 238);
                 &:hover{
+                    background-color: blue;
                     padding: 5px;
-                    color: rgb(253, 248, 248);
+                    color: rgb(255, 255, 255);
                 }
             }
         }
@@ -68,13 +71,11 @@
             position: absolute;
             top: 0px;
             right: 0px;
-            }
-    @media screen and (max-width: 550px) {
+        }
         .nav{
             display: none !important;
         }
     }
-}
 
 .form{
     position: relative;
@@ -92,13 +93,13 @@
     color: #fff;
     border: none;
     padding: 5px;
-    margin: 20px 10px 0 0;
+    margin: 20px 10px;
     border-radius: 10px;
 }
 
 
 
-//pagina de videos
+//pagina de videos 
 .navbar1{
     position:absolute;
     min-width: 200px;
@@ -111,8 +112,8 @@
         padding: 0;
         margin: 0;
         &-item {
-            text-decoration: none;
-            color: rgb(255, 255, 255);
+            list-style: none;
+            color:rgb(255, 255, 255);
             &-link{
                 color: rgb(255, 255, 255);
                 font-size: 18px;
@@ -122,15 +123,17 @@
                 }
             }
             &:hover{
-                background-color: rgb(16, 79, 224);
+                border-bottom: 2px solid blue;
             }
         }
     }
 }
+
 @media screen and (max-width: 550px) {
     .navbar1{
         @include mixin.flex-center;
         z-index: 1;
+        width: 100%;
         .navbar1-nav{
             @include mixin.flex-center;
             justify-content: space-around;
@@ -149,4 +152,57 @@
             }
         }
     }
+
+//pagina de servicios
+.navperfume{
+    background-color: black;
+    position: sticky;
+    top: 0;
+    min-width: 98vw;
+    height: 80px;
+    z-index: 10;
+    @include mixin.flex-center;
+    .subtitulo{
+        font-size: 14px;
+        margin-top: 20px;
+        color: variables.$dark-yellow;
+        
+}
+    .logo{
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+    }
+    .bi{
+        padding-right: 5px;
+        color: variables.$gold-accent;
+    }
+    .nav{
+        width: 60%;
+        &-list{
+            @include mixin.flex-center;
+            width: 90%;
+            justify-content: end;
+            gap: 30px;
+            font-size: 16px;
+            list-style: none;
+            .nav-link{
+                padding: 5px;
+                margin-top: 20px;
+                color: white;
+                &.activo{
+                    border-bottom: 2px solid variables.$yellow-accent;
+                    color: white;
+                }
+                }
+                .nav-link:hover{
+                    text-decoration: rgb(132, 152, 1) 2px underline;
+            }
+        }
+    }
+
+    .dropdown .dropdown-menu .dropdown-item:hover{
+        background-color: variables.$dark-yellow-bg;
+    }
+}
 
