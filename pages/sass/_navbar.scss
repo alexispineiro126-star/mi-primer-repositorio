@@ -55,6 +55,7 @@
         margin: 10px;
         .dropdown-menu{
             background-color: rgb(9, 9, 9);
+            
             .dropdown-item{
                 color: rgb(244, 238, 238);
                 &:hover{
@@ -79,7 +80,6 @@
 
 .form{
     position: relative;
-    margin-left: auto;
         .bi{
             position: absolute;
             right: 12px;

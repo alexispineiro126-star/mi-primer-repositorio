@@ -78,7 +78,6 @@
 }
 .form {
   position: relative;
-  margin-left: auto;
 }
 .form .bi {
   position: absolute;
@@ -271,6 +270,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   color: #0913e1;
 }
 .footer .logo {
@@ -295,17 +295,25 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: auto;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   background-color: #000000;
   color: antiquewhite;
 }
 .footeralto .caja-footer {
-  max-width: 400px;
+  min-width: 400px;
+  flex: 1;
+  margin-top: 10px;
+}
+.footeralto .caja-footer .logo {
+  display: block;
+  margin: auto;
+  width: 64px;
+  height: 64px;
 }
 
 .enviar {
-  background-color: #1a1f29;
+  background-color: rgb(215, 222, 13);
   cursor: pointer;
   color: #fff;
   border: none;
@@ -315,37 +323,62 @@
   border-radius: 10px;
 }
 
-.subcripcion {
-  font-size: 15px;
-}
-
 .copy {
   text-align: center;
   font-size: 14px;
   padding-top: 30px;
 }
 
+@media screen and (max-width: 600px) {
+  .footeralto {
+    flex-direction: column;
+  }
+  .footeralto .caja-footer {
+    width: 100%;
+  }
+}
 .marcador {
-  margin-left: 40px;
   cursor: pointer;
+  margin-left: 40px;
+  font-size: small;
 }
 
 .iconos {
   display: flex;
   list-style: none;
+  margin: 0;
+  justify-content: center;
 }
 .iconos .itemn {
-  padding-left: 10px;
+  padding: 10px;
+}
+.iconos .itemn .a {
+  color: rgb(177, 174, 2);
 }
 
 .correo {
   background-color: #1a1f29;
   color: #fff;
   border: none;
-  width: 95%;
+  width: 90%;
   padding: 5px;
   margin: 20px 10px;
   border-radius: 10px;
+}
+
+.listas {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.listas .bi {
+  padding-right: 10px;
+  color: white;
+  color: rgb(177, 174, 2);
+}
+
+.p {
+  font-size: 14px;
 }
 
 .body2 {
@@ -433,18 +466,14 @@
   box-shadow: 10px 5px rgba(6, 6, 6, 0.4);
   align-items: center;
   flex-direction: column;
-  width: 300px;
+  max-width: 300px;
   margin: 10px;
-  transition: transform 0.3s ease;
 }
 .caja .box .perfumes {
   -o-object-fit: cover;
      object-fit: cover;
-  width: 300px;
-  height: 200px;
-}
-.caja:hover {
-  transform: translatey(-10px);
+  min-width: 300px;
+  max-height: 200px;
 }
 
 .h4 {

@@ -1,9 +1,12 @@
 @use './mixin';
+@use './variables';
+
 //padina de inicio
 .footer{ 
     background-color:#000;
     box-sizing: border-box;
     @include mixin.flex-center;
+    flex-direction: column;
     color: #0913e1;
     .logo{
             width: 64px;
@@ -25,17 +28,26 @@
 }
 
 .footeralto{
-    @include mixin.flex-center;
-    height: auto;
-    justify-content: space-between;
+    @include mixin.flex-center; 
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     background-color: #000000;
     color: antiquewhite;
     .caja-footer{
-        max-width: 400px;
+        min-width: 400px;
+        flex: 1;
+        margin-top: 10px;
+        .logo{
+            display: block;
+            margin: auto;
+            width: 64px;
+            height: 64px;
+        }
     }
+
     }
     .enviar{
-        background-color:#1a1f29;
+        background-color: variables.$yellow-accent;
         cursor: pointer;
         color: #fff;
         border: none;
@@ -44,36 +56,63 @@
         margin: 20px 10px;
         border-radius: 10px;
     }
-    .subcripcion{
-                font-size: 15px;
-            }
     .copy{
         text-align: center;
         font-size: 14px;
         padding-top: 30px;
     }
+@media screen and (max-width: 600px) {
+    .footeralto {
+        flex-direction: column;
+    }
+
+    .footeralto .caja-footer {
+        width: 100%;
+    }
+}
 
 .marcador{
-    margin-left: 40px;
     cursor:pointer;
+    margin-left: 40px;
+    font-size: small;
 }
 
 .iconos{
     display: flex;
     list-style: none;
+    margin: 0;
+    justify-content: center;
     .itemn{
-        padding-left: 10px;
+        padding: 10px;
+        .a{
+            color:variables.$gold-accent;
+        }
     }
-}
+    
+    }
 .correo{
     background-color:#1a1f29;
     color: #fff;
     border: none;
-    width: 95%;
+    width: 90%;
     padding: 5px;
     margin: 20px 10px;
     border-radius: 10px;
 }
 
+.listas{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    .bi{
+        padding-right: 10px;
+        color: white;
+        color:variables.$gold-accent;
+    }
+}
+
+.p{
+    font-size: 14px;
+}
 
 
