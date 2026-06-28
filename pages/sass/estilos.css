@@ -204,51 +204,8 @@
   -webkit-text-decoration: rgb(132, 152, 1) 2px underline;
           text-decoration: rgb(132, 152, 1) 2px underline;
 }
-
-.dropdown {
-  display: none;
-  margin: 10px;
-}
-.dropdown .dropdown-menu {
-  background-color: rgb(9, 9, 9);
-}
-.dropdown .dropdown-menu .dropdown-item {
-  color: rgb(244, 238, 238);
-}
-.dropdown .dropdown-menu .dropdown-item:hover {
+.navperfume .dropdown .dropdown-menu .dropdown-item:hover {
   background-color: rgb(34, 32, 1);
-  padding: 5px;
-  color: rgb(255, 255, 255);
-}
-
-@media screen and (max-width: 550px) {
-  .dropdown {
-    display: block;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-  }
-  .nav {
-    display: none !important;
-  }
-}
-.form {
-  position: relative;
-  margin-left: auto;
-}
-.form .bi {
-  position: absolute;
-  right: 12px;
-  top: 34%;
-}
-
-.input {
-  background-color: #1a1f29;
-  color: #fff;
-  border: none;
-  padding: 5px;
-  margin: 20px 10px;
-  border-radius: 10px;
 }
 
 .contein {
@@ -270,13 +227,13 @@
   box-shadow: 10px 5px rgba(20, 19, 19, 0.4);
   align-items: center;
   flex-direction: column;
-  width: 300px;
-  height: 300;
+  border-radius: 50%;
   margin-bottom: 80px;
 }
 .contein .box .img {
-  max-width: 100px;
-  min-height: 100px;
+  max-width: 200px;
+  border-radius: 50%;
+  min-height: 200px;
   margin: 10px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -288,13 +245,14 @@
 .imagen-box {
   width: 100%;
   display: flex;
-  height: 400px;
+  align-items: center;
+  justify-content: center;
   position: relative;
 }
 
 .titulo {
   position: absolute;
-  top: 30%;
+  top: 20%;
   left: 5%;
   z-index: 1;
   color: aliceblue;
@@ -305,28 +263,14 @@
 
 .img1 {
   width: 100%;
-  height: 400px;
-}
-
-.overlay {
-  width: 100%;
-  height: 400px;
-  position: absolute;
-  top: 0;
-  background: linear-gradient(to right, rgba(0, 3, 35, 0.4), rgba(0, 0, 0, 0.4));
-}
-.overlay .lorem {
-  position: absolute;
-  top: 43%;
-  left: 5%;
-  color: aliceblue;
-  font-size: 10px;
 }
 
 .footer {
   background-color: #000;
   box-sizing: border-box;
   display: flex;
+  align-items: center;
+  justify-content: center;
   color: #0913e1;
 }
 .footer .logo {
@@ -339,6 +283,69 @@
   margin: auto;
   color: aliceblue;
   text-align: center;
+}
+
+.body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.footeralto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  justify-content: space-between;
+  background-color: #000000;
+  color: antiquewhite;
+}
+.footeralto .caja-footer {
+  max-width: 400px;
+}
+
+.enviar {
+  background-color: #1a1f29;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  width: 90%;
+  padding: 5px;
+  margin: 20px 10px;
+  border-radius: 10px;
+}
+
+.subcripcion {
+  font-size: 15px;
+}
+
+.copy {
+  text-align: center;
+  font-size: 14px;
+  padding-top: 30px;
+}
+
+.marcador {
+  margin-left: 40px;
+  cursor: pointer;
+}
+
+.iconos {
+  display: flex;
+  list-style: none;
+}
+.iconos .itemn {
+  padding-left: 10px;
+}
+
+.correo {
+  background-color: #1a1f29;
+  color: #fff;
+  border: none;
+  width: 95%;
+  padding: 5px;
+  margin: 20px 10px;
+  border-radius: 10px;
 }
 
 .body2 {
@@ -412,7 +419,7 @@
   }
 }
 .caja {
-  width: 99%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -427,32 +434,17 @@
   align-items: center;
   flex-direction: column;
   width: 300px;
-  height: 200px;
   margin: 10px;
   transition: transform 0.3s ease;
 }
-.caja .box .parrafo {
-  color: black;
-  text-align: center;
+.caja .box .perfumes {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 300px;
+  height: 200px;
 }
-.caja .box:hover {
+.caja:hover {
   transform: translatey(-10px);
-}
-.caja .box:hover .minititulo {
-  padding: 10 20 10 20;
-  text-align: center;
-}
-
-.icono {
-  margin-top: 10px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: rgb(192, 203, 199);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgb(68, 5, 102);
 }
 
 .h4 {
@@ -465,7 +457,7 @@
   text-align: center;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 850px) {
   .caja {
     flex-direction: column;
     align-items: center;
@@ -481,8 +473,8 @@
 }
 .caja-perfumes .separacion {
   max-width: 350px;
-  margin: 40px;
   height: 150px;
+  margin: 20px;
   border-left: 2px solid rgb(38, 37, 37);
 }
 
@@ -492,6 +484,7 @@
 }
 
 .none {
+  margin-top: 10px;
   max-width: 350px;
   height: 150px;
 }
@@ -499,14 +492,19 @@
 .texto {
   text-align: center;
   font-size: 18px;
-  color: aliceblue;
+  color: rgb(255, 234, 0);
 }
 
 .parrafo {
-  color: aliceblue;
+  color: rgb(255, 255, 255);
   text-align: center;
   font-size: 16px;
   padding-left: 10px;
+}
+
+.fragancia {
+  padding: 10px;
+  text-align: center;
 }
 
 @media screen and (max-width: 600px) {
@@ -522,22 +520,20 @@
     max-width: 300px;
     flex-direction: column;
     align-items: center;
-    margin: 10px;
     border: 2px solid rgb(38, 37, 37);
   }
   .none {
     width: 80%;
-    max-width: 300px;
+    max-width: 350px;
     height: auto;
     border: 2px solid rgb(38, 37, 37);
     flex-direction: column;
     align-items: center;
-    margin: 10px;
   }
 }
 .boton {
   position: absolute;
-  top: 60%;
+  top: 45%;
   left: 160px;
   color: bisque;
   background-color: transparent;
@@ -571,11 +567,6 @@
   z-index: 9;
 }
 
-@media screen and (max-width: 600px) {
-  .boton {
-    left: 110px;
-  }
-}
 .boton-violet {
   position: absolute;
   padding: 3px 10px;
@@ -584,9 +575,20 @@
   border: none;
   left: 5%;
   color: azure;
-  top: 60%;
+  top: 45%;
 }
 
+@media screen and (max-width: 600px) {
+  .boton {
+    left: 110px;
+    top: 60%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .boton-violet {
+    top: 60%;
+  }
+}
 .perfume {
   position: absolute;
   bottom: 10%;
@@ -610,6 +612,39 @@
     position: absolute;
     bottom: 10%;
     left: 7%;
+  }
+}
+.div-conteiner {
+  overflow: hidden;
+  margin: auto;
+  width: 80%;
+  border-radius: 8px;
+  background-color: rgb(245, 245, 245);
+  padding: 20px 0;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+}
+.div-conteiner .div-img {
+  display: flex;
+  gap: 20px;
+  width: -moz-max-content;
+  width: max-content;
+  animation: animate 20s linear infinite;
+}
+.div-conteiner .div-img .carrusel {
+  min-width: 18px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+}
+.div-conteiner .div-img .carrusel:hover {
+  transform: scale(1.1);
+}
+
+@keyframes animate {
+  to {
+    transform: translateX(-50%);
   }
 }
 * {

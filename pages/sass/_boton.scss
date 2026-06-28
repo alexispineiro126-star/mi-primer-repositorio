@@ -1,7 +1,7 @@
 
 .boton{
     position: absolute;
-    top: 60%;
+    top: 45%;
     left: 160px;
     color: bisque;
     background-color: transparent;
@@ -34,13 +34,6 @@
         z-index: 9;
     }
 }
-
-
-@media screen and (max-width:600px){
-    .boton{
-        left: 110px;
-    }
-}
 .boton-violet{
     position: absolute;
     padding: 3px 10px;
@@ -49,7 +42,22 @@
     border: none;
     left: 5%;
     color: azure;
-    top: 60%;
+    top: 45%;
 }
+
+@media screen and (max-width:600px){
+    .boton{
+        left: 110px;
+        top:60%;
+    }
+}
+
+@media screen and (max-width:600px){
+    .boton-violet{
+        top:60%;
+    }
+}
+
+
 
 

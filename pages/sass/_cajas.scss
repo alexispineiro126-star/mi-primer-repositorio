@@ -1,7 +1,7 @@
 @use './mixin';
 
 .caja{
-    width: 99%;
+    width: 100%;
     @include mixin.flex-center;
     justify-content: center;
     .box{
@@ -11,34 +11,22 @@
         align-items: center;
         flex-direction: column;
         width: 300px;
-        height: 200px;
         margin: 10px;
         transition: transform 0.3s ease;
-        .parrafo{
-        color: black;
-        text-align: center;
+        .perfumes{
+            object-fit: cover;
+            width: 300px;
+            height: 200px;
+        }
 }
         &:hover{
                 transform: translatey(-10px);
-                .minititulo{
-                padding: 10 20 10 20; 
-                text-align: center;
             }
         }
-    }
-}
 
-.icono{
-    margin-top: 10px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: rgb(192, 203, 199);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgb(68, 5, 102);
-}
+
+
+
 .h4{
     padding:  80px;
     text-align: center;
@@ -49,7 +37,7 @@
 }
 
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 850px){
     .caja{
         flex-direction: column;
         align-items: center;
@@ -63,8 +51,8 @@
     background-color: rgb(12, 12, 12);
     .separacion{
         max-width: 350px;
-        margin: 40px;
         height: 150px;
+        margin: 20px;
         border-left: 2px solid rgb(38, 37, 37);
     }
 }
@@ -73,6 +61,7 @@
     height: 50px;
 }
 .none{
+    margin-top: 10px;
     max-width: 350px;
     height: 150px;
 }
@@ -80,14 +69,18 @@
 .texto{
     text-align: center;
     font-size: 18px;
-    color: aliceblue;
+    color: rgb(255, 234, 0);
 }
 
 .parrafo{
-    color: aliceblue;
+    color: rgb(255, 255, 255);
     text-align: center;
     font-size: 16px;
     padding-left: 10px;
+}
+.fragancia{
+    padding: 10px;
+    text-align: center;
 }
 
 @media screen and (max-width:600px){
@@ -103,16 +96,14 @@
         max-width: 300px;
         flex-direction: column;
         align-items: center;
-        margin: 10px;
         border: 2px solid rgb(38, 37, 37);
     }
     .none{
         width: 80%;
-        max-width: 300px;
+        max-width: 350px;
         height: auto;
         border: 2px solid rgb(38, 37, 37);
         flex-direction: column;
         align-items: center;
-        margin: 10px;
     }
 }

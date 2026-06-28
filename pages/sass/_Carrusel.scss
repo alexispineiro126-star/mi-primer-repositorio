@@ -26,6 +26,37 @@
     }
 }
 
+.div-conteiner{
+    overflow: hidden;
+    margin: auto;
+    width: 80%;
+    border-radius: 8px;
+    background-color: rgb(245, 245, 245);
+    padding: 20px 0;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.15);
+    .div-img{
+        display: flex;
+        gap: 20px;
+        width: max-content;
+        animation: animate 20s linear infinite;
+        .carrusel{
+            min-width: 18px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.2s ease-in-out;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+@keyframes animate {
+    to {
+        transform: translateX(-50%);
+    }
+}
+
 
 
 

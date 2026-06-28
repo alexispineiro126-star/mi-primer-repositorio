@@ -1,9 +1,9 @@
-
-
+@use './mixin';
+//padina de inicio
 .footer{ 
     background-color:#000;
     box-sizing: border-box;
-    display: flex;
+    @include mixin.flex-center;
     color: #0913e1;
     .logo{
             width: 64px;
@@ -17,3 +17,63 @@
             text-align: center;
     }
 }
+//padina de servicios 
+.body{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.footeralto{
+    @include mixin.flex-center;
+    height: auto;
+    justify-content: space-between;
+    background-color: #000000;
+    color: antiquewhite;
+    .caja-footer{
+        max-width: 400px;
+    }
+    }
+    .enviar{
+        background-color:#1a1f29;
+        cursor: pointer;
+        color: #fff;
+        border: none;
+        width: 90%;
+        padding: 5px;
+        margin: 20px 10px;
+        border-radius: 10px;
+    }
+    .subcripcion{
+                font-size: 15px;
+            }
+    .copy{
+        text-align: center;
+        font-size: 14px;
+        padding-top: 30px;
+    }
+
+.marcador{
+    margin-left: 40px;
+    cursor:pointer;
+}
+
+.iconos{
+    display: flex;
+    list-style: none;
+    .itemn{
+        padding-left: 10px;
+    }
+}
+.correo{
+    background-color:#1a1f29;
+    color: #fff;
+    border: none;
+    width: 95%;
+    padding: 5px;
+    margin: 20px 10px;
+    border-radius: 10px;
+}
+
+
+
