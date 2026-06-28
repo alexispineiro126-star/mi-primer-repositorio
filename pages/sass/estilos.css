@@ -302,7 +302,9 @@
 }
 .footeralto .caja-footer {
   min-width: 400px;
+  display: flex;
   flex: 1;
+  flex-direction: column;
   margin-top: 10px;
 }
 .footeralto .caja-footer .logo {
@@ -317,7 +319,7 @@
   cursor: pointer;
   color: #fff;
   border: none;
-  width: 90%;
+  width: 60%;
   padding: 5px;
   margin: 20px 10px;
   border-radius: 10px;
@@ -339,15 +341,15 @@
 }
 .marcador {
   cursor: pointer;
-  margin-left: 40px;
   font-size: small;
 }
 
 .iconos {
   display: flex;
+  align-items: center;
+  justify-content: center;
   list-style: none;
   margin: 0;
-  justify-content: center;
 }
 .iconos .itemn {
   padding: 10px;
@@ -360,7 +362,7 @@
   background-color: #1a1f29;
   color: #fff;
   border: none;
-  width: 90%;
+  width: 60%;
   padding: 5px;
   margin: 20px 10px;
   border-radius: 10px;
@@ -637,7 +639,7 @@
 @media screen and (max-width: 600px) {
   .perfume {
     padding: 3px 6px;
-    font-size: 14px;
+    font-size: 10px;
     position: absolute;
     bottom: 10%;
     left: 7%;
