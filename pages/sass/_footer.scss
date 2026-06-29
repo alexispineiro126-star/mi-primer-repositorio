@@ -2,6 +2,13 @@
 @use './variables';
 
 //padina de inicio
+.body2{
+    display: flex;
+    min-height: 100vh;
+    background:linear-gradient(#100514,#0f0514);
+    flex-direction: column;
+}
+
 .footer{ 
     background-color:#000;
     box-sizing: border-box;
@@ -27,6 +34,7 @@
     flex-direction: column;
 }
 
+
 .footeralto{
     @include mixin.flex-center;
     background-color: #000; 
@@ -35,8 +43,6 @@
     flex-wrap: wrap;
     color: antiquewhite;
     .caja-footer{
-        container-type: inherit;
-        container-name: foter;
         min-width: 400px;
         display: flex;
         flex: 1;
@@ -49,12 +55,12 @@
             height: 64px;
         }
         .marcador{
-            margin-left: 0;
+            margin:30px;
             align-self: flex-start;
         }
         .checkbox-wrap{
             @include mixin.flex-center;
-            gap: 8px;
+            gap: 2px;
             align-self: flex-start;
         }
     }
@@ -67,7 +73,7 @@
         border: none;
         width: 60%;
         padding: 5px;
-        margin: 20px 10px;
+        margin: auto;
         border-radius: 10px;
     }
     .copy{
@@ -86,11 +92,6 @@
     }
 }
 
-.marcador{
-    cursor:pointer;
-
-    font-size: small;
-}
 
 .iconos{
     @include mixin.flex-center;
@@ -109,8 +110,8 @@
     color: #fff;
     border: none;
     width: 60%;
+    margin: auto;
     padding: 5px;
-    margin: 20px 10px;
     border-radius: 10px;
 }
 
@@ -127,10 +128,6 @@
 
 .p{
     font-size: 14px;
+    text-align: center;
 }
 
-@container foter (max-width: 600px){
-    .copy{
-    width: 90%;
-    }
-}

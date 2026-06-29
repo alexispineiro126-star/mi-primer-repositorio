@@ -264,6 +264,13 @@
   width: 100%;
 }
 
+.body2 {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(#100514, #0f0514);
+  flex-direction: column;
+}
+
 .footer {
   background-color: #000;
   box-sizing: border-box;
@@ -302,8 +309,6 @@
   color: antiquewhite;
 }
 .footeralto .caja-footer {
-  container-type: inherit;
-  container-name: foter;
   min-width: 400px;
   display: flex;
   flex: 1;
@@ -317,14 +322,14 @@
   height: 64px;
 }
 .footeralto .caja-footer .marcador {
-  margin-left: 0;
+  margin: 30px;
   align-self: flex-start;
 }
 .footeralto .caja-footer .checkbox-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 2px;
   align-self: flex-start;
 }
 
@@ -335,7 +340,7 @@
   border: none;
   width: 60%;
   padding: 5px;
-  margin: 20px 10px;
+  margin: auto;
   border-radius: 10px;
 }
 
@@ -355,11 +360,6 @@
     min-width: 0;
   }
 }
-.marcador {
-  cursor: pointer;
-  font-size: small;
-}
-
 .iconos {
   display: flex;
   align-items: center;
@@ -379,8 +379,8 @@
   color: #fff;
   border: none;
   width: 60%;
+  margin: auto;
   padding: 5px;
-  margin: 20px 10px;
   border-radius: 10px;
 }
 
@@ -397,13 +397,9 @@
 
 .p {
   font-size: 14px;
+  text-align: center;
 }
 
-@container foter (max-width: 600px) {
-  .copy {
-    width: 90%;
-  }
-}
 .body2 {
   background: #000;
 }
@@ -482,7 +478,6 @@
   justify-content: center;
 }
 .caja .box {
-  background-color: #e6e6f4;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -492,6 +487,17 @@
   max-width: 300px;
   margin: 10px;
 }
+.caja .box .comprar {
+  border-radius: 10px;
+  border: 2px solid rgb(169, 9, 249);
+  background-color: black;
+  width: 100%;
+  padding: 5px;
+}
+.caja .box .enlace {
+  color: rgb(169, 9, 249);
+  text-decoration: none;
+}
 .caja .box .perfumes {
   -o-object-fit: cover;
      object-fit: cover;
@@ -499,12 +505,13 @@
   max-height: 200px;
 }
 
-.h4 {
-  padding: 80px;
-  text-align: center;
+.comprar {
+  padding: 20px;
+  width: 100%;
 }
 
-.h3 {
+.subtitulo {
+  color: antiquewhite;
   padding: 20px;
   text-align: center;
 }
