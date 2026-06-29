@@ -295,12 +295,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #000;
+  width: 100%;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  background-color: #000000;
   color: antiquewhite;
 }
 .footeralto .caja-footer {
+  container-type: inherit;
+  container-name: foter;
   min-width: 400px;
   display: flex;
   flex: 1;
@@ -312,6 +315,17 @@
   margin: auto;
   width: 64px;
   height: 64px;
+}
+.footeralto .caja-footer .marcador {
+  margin-left: 0;
+  align-self: flex-start;
+}
+.footeralto .caja-footer .checkbox-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  align-self: flex-start;
 }
 
 .enviar {
@@ -333,10 +347,12 @@
 
 @media screen and (max-width: 600px) {
   .footeralto {
+    width: 100%;
     flex-direction: column;
   }
   .footeralto .caja-footer {
     width: 100%;
+    min-width: 0;
   }
 }
 .marcador {
@@ -383,6 +399,11 @@
   font-size: 14px;
 }
 
+@container foter (max-width: 600px) {
+  .copy {
+    width: 90%;
+  }
+}
 .body2 {
   background: #000;
 }
