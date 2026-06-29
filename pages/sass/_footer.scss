@@ -12,6 +12,7 @@
 .footer{ 
     background-color:#000;
     box-sizing: border-box;
+    border-top: 1px solid  rgb(169, 9, 249);
     @include mixin.flex-center;
     flex-direction: column;
     color: #0913e1;
