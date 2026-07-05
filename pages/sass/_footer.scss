@@ -49,6 +49,11 @@
         flex: 1;
         flex-direction: column;
         margin-top: 10px;
+        .bi{
+            padding-right: 10px;
+            color: white;
+            color:variables.$gold-accent;
+        }
         .logo{
             display: block;
             margin: auto;
@@ -61,7 +66,7 @@
         }
         .checkbox-wrap{
             @include mixin.flex-center;
-            gap: 2px;
+            margin-left: 35px;
             align-self: flex-start;
         }
     }
@@ -120,7 +125,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    .bi{
+    .bi-footer{
         padding-right: 10px;
         color: white;
         color:variables.$gold-accent;
@@ -130,5 +135,25 @@
 .p{
     font-size: 14px;
     text-align: center;
+}
+
+//hombres
+.hombres-footer{
+    background-color:#040014;
+    box-sizing: border-box;
+    border-top: 1px solid  rgb(169, 9, 249);
+    @include mixin.flex-center;
+    flex-direction: column;
+    color: #0913e1;
+    .logo{
+            width: 64px;
+            height: 64px;
+        }
+        .copy{
+            font-size: 10px;
+            margin: auto;
+            color: aliceblue;
+            text-align: center;
+    }
 }
 

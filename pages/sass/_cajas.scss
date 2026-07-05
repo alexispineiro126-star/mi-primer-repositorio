@@ -1,6 +1,6 @@
 @use './mixin';
 @use'./variables';
-
+//inicio de cajas de productos
 .caja{
     width: 100%;
     @include mixin.flex-center;
@@ -30,10 +30,6 @@
         }
     }
 }
-.comprar{
-                padding: 20px;
-                width: 100%;
-            }
 
 
 .subtitulo{
@@ -48,29 +44,96 @@
         align-items: center;
     }
 }
-//pagina de servicios
-.caja-perfumes{
+
+.caja-tarjetas{
     width: 100%;
     height: 180px;
     @include mixin.flex-center;
-    background-color: rgb(12, 12, 12);
-    .separacion{
-        max-width: 350px;
-        height: 150px;
-        margin: 20px;
-        border-left: 2px solid rgb(38, 37, 37);
+    background-color: rgb(9, 1, 12);
+    .tarjeta 
+    .sin-tarjeta{
+        width: 80%;
+        max-width: 300px;
+        flex-direction: column;
+        align-items: center;
+        border: 2px solid rgb(38, 37, 37);
     }
+}
+.texto-tarjeta{
+    text-align: center;
+    font-size: 18px;
+    color: rgb(152, 20, 247);
 }
 .logo{
     width: 50px;
     height: 50px;
 }
-.none{
-    margin-top: 10px;
-    max-width: 350px;
-    height: 150px;
+
+.parrafo{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 16px;
+    padding-left: 10px;
+}
+.fragancia{
+    padding: 10px;
+    text-align: center;
 }
 
+@media screen and (max-width:600px){
+    .caja-tarjetas{
+        display: flex;
+        width: 100%;
+        height: 500px;
+        flex-direction: column;
+        align-items: center;
+    }
+    }
+    .sin-tarjeta{
+        width: 80%;
+        max-width: 300px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .tarjeta{
+        width: 80%;
+        max-width: 300px;
+        flex-direction: column;
+        align-items: center;
+        border-left: 2px solid rgb(138, 4, 228);
+}
+
+//pagina de servicios
+.caja-perfumes{
+    width: 100%;
+    padding: 20px;
+    @include mixin.flex-center;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: rgb(12, 12, 12);
+
+    .separacion{
+        flex: 1 1 220px;
+        max-width: 350px;
+        margin: 0;
+        border-left: 2px solid rgb(38, 37, 37);
+    }
+    .none{
+        flex: 1 1 220px;
+        max-width: 350px;
+        margin: 0;
+    }
+}
+.bi{
+        display: block;
+        text-align: center;
+        font-size: 40px;
+        color: rgb(255, 234, 0);
+}
+.logo{
+    width: 50px;
+    height: 50px;
+}
 .texto{
     text-align: center;
     font-size: 18px;
@@ -90,24 +153,57 @@
 
 @media screen and (max-width:600px){
     .caja-perfumes{
-        display: flex;
         width: 100%;
-        height: 500px;
-        flex-direction: column;
-        align-items: center;
-    }
-    .separacion{
-        width: 80%;
-        max-width: 300px;
-        flex-direction: column;
-        align-items: center;
-        border: 2px solid rgb(38, 37, 37);
-    }
-    .none{
-        width: 80%;
-        max-width: 350px;
         height: auto;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .separacion,
+    .none{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
         border: 2px solid rgb(38, 37, 37);
+    }
+}
+
+//paginas de hombres
+.hombres{
+    display: flex;
+    flex-direction: column;
+}
+.titulo-hombre{
+    text-align: center;
+}
+.caja-hombres{
+    width: 100%;
+    @include mixin.flex-center;
+    justify-content: center;
+    .perfume-hombres{
+        @include mixin.flex-center;
+        align-items: center;
+        flex-direction: column;
+        max-width: 300px;
+        margin: 10px;
+    }
+    .perfume-hombre-img{
+        object-fit: cover;
+        min-width: 300px;
+        max-height: 300px;
+    }
+    .comprar-hombres{
+        border-radius: 10px;
+        border: 2px solid rgb(3, 3, 113);
+        background-color: rgb(117, 119, 234);
+        width: 100%;
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 850px){
+    .caja-hombres{
         flex-direction: column;
         align-items: center;
     }

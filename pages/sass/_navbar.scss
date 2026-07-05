@@ -21,7 +21,7 @@
         height: 60px;
         margin: 5px;
     }
-    .bi{
+    .bi-inicio{
         padding-right: 5px;
         color: white;
     }
@@ -42,12 +42,12 @@
                     border-bottom: 2px solid  rgb(167, 43, 250);
                     color: white;
                 }
-                }
-                .nav-link:hover{
+                &:hover{
                     text-decoration: rgb(169, 9, 249) 2px underline;
                 }
             }
         }
+    }
     }
 
     .dropdown{
@@ -59,7 +59,7 @@
             .dropdown-item{
                 color: rgb(244, 238, 238);
                 &:hover{
-                    background-color: blue;
+                    background-color: rgb(255, 255, 255);
                     padding: 5px;
                     color: rgb(255, 255, 255);
                 }
@@ -80,7 +80,7 @@
 
 .form{
     position: relative;
-        .bi{
+        .bi-inicio{
             position: absolute;
             right: 12px;
             top: 34%;
@@ -98,61 +98,6 @@
 }
 
 
-
-//pagina de videos 
-.navbar1{
-    position:absolute;
-    min-width: 200px;
-    height: 100vh;
-    display: flex;
-    &-nav{
-        @include mixin.flex-center;
-        flex-direction: column;
-        justify-content: space-around;
-        padding: 0;
-        margin: 0;
-        &-item {
-            list-style: none;
-            color:rgb(255, 255, 255);
-            &-link{
-                color: rgb(255, 255, 255);
-                font-size: 18px;
-                text-decoration: none;
-                .bi{
-                    padding-right: 5px;
-                }
-            }
-            &:hover{
-                border-bottom: 2px solid blue;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 550px) {
-    .navbar1{
-        @include mixin.flex-center;
-        z-index: 1;
-        width: 100%;
-        .navbar1-nav{
-            @include mixin.flex-center;
-            justify-content: space-around;
-            width: 100%;
-            position: fixed;
-            bottom: 0;
-            flex-direction: row;
-            min-height: 5vh;
-            &-item{
-                list-style: none;
-                flex-wrap: wrap; 
-                &-link{
-                    font-size: 19px;
-                }
-                }
-            }
-        }
-    }
-
 //pagina de servicios
 .navperfume{
     background-color: black;
@@ -166,14 +111,13 @@
         font-size: 14px;
         margin-top: 20px;
         color: variables.$dark-yellow;
-        
-}
+    }
     .logo{
         width: 50px;
         height: 50px;
         margin: 5px;
     }
-    .bi{
+    .bi-servicios{
         padding-right: 5px;
         color: variables.$gold-accent;
     }
@@ -194,9 +138,9 @@
                     border-bottom: 2px solid variables.$yellow-accent;
                     color: white;
                 }
-                }
-                .nav-link:hover{
+                &:hover{
                     text-decoration: rgb(132, 152, 1) 2px underline;
+                }
             }
         }
     }
@@ -206,3 +150,116 @@
     }
 }
 
+//pagina de hombres
+
+.nav-hombre{
+    background-color: rgb(205, 206, 209);
+    position: sticky;
+    top: 0;
+    min-width: 98vw;
+    height: 80px;
+    z-index: 10;
+    @include mixin.flex-center;
+    }
+    .logo{
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+    }
+    .bi-hombre{
+        padding-right: 5px;
+        color: #000000;
+    }
+    .form{
+    position: relative;
+        .bi-servicios{
+            position: absolute;
+            right: 12px;
+            top: 34%;
+        }
+    }
+    .perfume-hombre{
+        width: 60%;
+        .perfume-hombre-list{
+            @include mixin.flex-center;
+            width: 90%;
+            justify-content: end;
+            gap: 30px;
+            font-size: 16px;
+            list-style: none;
+            .perfume-hombre-link{
+                text-decoration: none;
+                padding: 5px;
+                margin-top: 20px;
+                color: rgb(0, 0, 0);
+                &.activo{
+                    border-bottom: 2px solid #0137a3;
+                }
+                &:hover{
+                    text-decoration: rgb(11, 145, 255) 2px underline;
+                }
+            }
+        }
+    }
+
+.formu{
+    position: relative;
+        .bi-servicios{
+            position: absolute;
+            right: 12px;
+            top: 34%;
+        }
+    }
+
+.dropdown .dropdown-menu .dropdown-item:hover{
+        background-color: rgba(73, 103, 255, 0.221);
+}
+
+
+.dropdown{
+        display: none;
+        margin: 10px;
+        .dropdown-hombre-menu{
+            background-color: rgb(241, 0, 0);
+            
+            .dropdown-item{
+                color: rgb(255, 255, 255);
+                &:hover{
+                    background-color: rgb(100, 167, 255);
+                    padding: 5px;
+                    color: rgb(255, 255, 255);
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 550px){
+        .dropdown{
+            display: block;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+        .perfume-hombre{
+            display: none !important;
+        }
+    }
+
+
+.formu{
+    position: relative;
+        .bi-hombre{
+            position: absolute;
+            right: 12px;
+            top: 34%;
+        }
+    }
+
+
+.buscar{
+    background-color:#b2c5ff;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    margin: 20px 10px;
+    border-radius: 10px;
+}
