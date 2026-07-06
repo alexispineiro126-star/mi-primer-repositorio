@@ -150,7 +150,7 @@
 }
 
 .nav-hombre {
-  background-color: rgb(205, 206, 209);
+  background-color: rgb(1, 11, 42);
   position: sticky;
   top: 0;
   min-width: 98vw;
@@ -169,7 +169,7 @@
 
 .bi-hombre {
   padding-right: 5px;
-  color: #000000;
+  color: #f5f0f0;
 }
 
 .form {
@@ -198,14 +198,20 @@
   text-decoration: none;
   padding: 5px;
   margin-top: 20px;
-  color: rgb(0, 0, 0);
+  color: #f5f0f0;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
 .perfume-hombre .perfume-hombre-list .perfume-hombre-link.activo {
-  border-bottom: 2px solid #0137a3;
+  border-bottom: 2px solid #1653ce;
 }
-.perfume-hombre .perfume-hombre-list .perfume-hombre-link:hover {
-  -webkit-text-decoration: rgb(11, 145, 255) 2px underline;
-          text-decoration: rgb(11, 145, 255) 2px underline;
+.perfume-hombre .perfume-hombre-list .perfume-hombre-link:hover, .perfume-hombre .perfume-hombre-list .perfume-hombre-link:focus-visible {
+  -webkit-text-decoration: underline 2px solid #1653ce !important;
+          text-decoration: underline 2px solid #1653ce !important;
+  color: #1653ce !important;
+}
+
+.dropdown .dropdown-menu .dropdown-item:hover {
+  background-color: rgba(73, 103, 255, 0.221);
 }
 
 .formu {
@@ -215,26 +221,6 @@
   position: absolute;
   right: 12px;
   top: 34%;
-}
-
-.dropdown .dropdown-menu .dropdown-item:hover {
-  background-color: rgba(73, 103, 255, 0.221);
-}
-
-.dropdown {
-  display: none;
-  margin: 10px;
-}
-.dropdown .dropdown-hombre-menu {
-  background-color: rgb(241, 0, 0);
-}
-.dropdown .dropdown-hombre-menu .dropdown-item {
-  color: rgb(255, 255, 255);
-}
-.dropdown .dropdown-hombre-menu .dropdown-item:hover {
-  background-color: rgb(100, 167, 255);
-  padding: 5px;
-  color: rgb(255, 255, 255);
 }
 
 @media screen and (max-width: 550px) {
@@ -266,6 +252,112 @@
   border-radius: 10px;
 }
 
+.mujeres {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-mujer {
+  background-color: rgb(245, 214, 240);
+  position: sticky;
+  top: 0;
+  min-width: 98vw;
+  height: 80px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+}
+
+.bi-mujer {
+  padding-right: 5px;
+  color: #910396;
+}
+
+.formula {
+  position: relative;
+}
+.formula .bi-mujer {
+  position: absolute;
+  right: 12px;
+  top: 34%;
+}
+
+.perfume-mujer {
+  width: 60%;
+}
+.perfume-mujer .perfume-mujer-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  justify-content: end;
+  gap: 30px;
+  font-size: 16px;
+  list-style: none;
+}
+.perfume-mujer .perfume-mujer-list .perfume-mujer-link {
+  text-decoration: none;
+  padding: 5px;
+  margin-top: 20px;
+  color: rgb(0, 0, 0);
+}
+.perfume-mujer .perfume-mujer-list .perfume-mujer-link.activo {
+  border-bottom: 2px solid #f95ae4;
+}
+.perfume-mujer .perfume-mujer-list .perfume-mujer-link:hover {
+  -webkit-text-decoration: rgb(225, 103, 244) 2px underline;
+          text-decoration: rgb(225, 103, 244) 2px underline;
+}
+
+.formula {
+  position: relative;
+}
+.formula .bi-mujer {
+  position: absolute;
+  right: 12px;
+  top: 34%;
+}
+
+.dropdown .dropdown-menu .dropdown-item:hover {
+  background-color: rgba(225, 52, 252, 0.221);
+}
+
+@media screen and (max-width: 550px) {
+  .dropdown {
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+  .perfume-mujer {
+    display: none !important;
+  }
+}
+.formula {
+  position: relative;
+}
+.formula .bi-mujer {
+  position: absolute;
+  right: 12px;
+  top: 34%;
+}
+
+.buscar-mujer {
+  background-color: #430248;
+  color: #fff;
+  border: none;
+  padding: 5px;
+  margin: 20px 10px;
+  border-radius: 10px;
+}
+
 .imagen-box {
   width: 100%;
   display: flex;
@@ -288,6 +380,18 @@
 .img1 {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.imagen-mujer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagen-mujer .img-mujer {
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -510,12 +614,18 @@
   justify-content: center;
   background-color: rgb(9, 1, 12);
 }
-.caja-tarjetas .tarjeta .sin-tarjeta {
+.caja-tarjetas .sin-tarjeta {
   width: 80%;
   max-width: 300px;
   flex-direction: column;
   align-items: center;
-  border: 2px solid rgb(38, 37, 37);
+}
+.caja-tarjetas .tarjeta {
+  width: 80%;
+  max-width: 300px;
+  flex-direction: column;
+  align-items: center;
+  border-left: 2px solid rgb(138, 4, 228);
 }
 
 .texto-tarjeta {
@@ -544,27 +654,21 @@
 @media screen and (max-width: 600px) {
   .caja-tarjetas {
     display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 500px;
     flex-direction: column;
     align-items: center;
   }
+  .sin-tarjeta, .tarjeta {
+    width: 80%;
+    max-width: 300px;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid rgb(138, 4, 228);
+  }
 }
-.sin-tarjeta {
-  width: 80%;
-  max-width: 300px;
-  flex-direction: column;
-  align-items: center;
-}
-
-.tarjeta {
-  width: 80%;
-  max-width: 300px;
-  flex-direction: column;
-  align-items: center;
-  border-left: 2px solid rgb(138, 4, 228);
-}
-
 .caja-perfumes {
   width: 100%;
   padding: 20px;

@@ -153,7 +153,7 @@
 //pagina de hombres
 
 .nav-hombre{
-    background-color: rgb(205, 206, 209);
+    background-color: rgb(1, 11, 42);
     position: sticky;
     top: 0;
     min-width: 98vw;
@@ -168,7 +168,7 @@
     }
     .bi-hombre{
         padding-right: 5px;
-        color: #000000;
+        color: #f5f0f0;
     }
     .form{
     position: relative;
@@ -191,17 +191,22 @@
                 text-decoration: none;
                 padding: 5px;
                 margin-top: 20px;
-                color: rgb(0, 0, 0);
+                color: #f5f0f0;
+                transition: color 0.2s ease, text-decoration-color 0.2s ease;
                 &.activo{
-                    border-bottom: 2px solid #0137a3;
+                    border-bottom: 2px solid #1653ce;
                 }
-                &:hover{
-                    text-decoration: rgb(11, 145, 255) 2px underline;
+                &:hover,
+                &:focus-visible{
+                    text-decoration: underline 2px solid #1653ce !important;
+                    color: #1653ce !important;
                 }
             }
         }
     }
-
+.dropdown .dropdown-menu .dropdown-item:hover{
+        background-color: rgba(73, 103, 255, 0.221);
+}
 .formu{
     position: relative;
         .bi-servicios{
@@ -211,27 +216,7 @@
         }
     }
 
-.dropdown .dropdown-menu .dropdown-item:hover{
-        background-color: rgba(73, 103, 255, 0.221);
-}
 
-
-.dropdown{
-        display: none;
-        margin: 10px;
-        .dropdown-hombre-menu{
-            background-color: rgb(241, 0, 0);
-            
-            .dropdown-item{
-                color: rgb(255, 255, 255);
-                &:hover{
-                    background-color: rgb(100, 167, 255);
-                    padding: 5px;
-                    color: rgb(255, 255, 255);
-                }
-            }
-        }
-    }
     @media screen and (max-width: 550px){
         .dropdown{
             display: block;
@@ -257,6 +242,107 @@
 
 .buscar{
     background-color:#b2c5ff;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    margin: 20px 10px;
+    border-radius: 10px;
+}
+
+//paginas de mujeres
+.mujeres{
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-mujer{
+    background-color: rgb(245, 214, 240);
+    position: sticky;
+    top: 0;
+    min-width: 98vw;
+    height: 80px;
+    z-index: 10;
+    @include mixin.flex-center;
+    }
+    .logo{
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+    }
+    .bi-mujer{
+        padding-right: 5px;
+        color: #910396;
+    }
+    .formula{
+    position: relative;
+        .bi-mujer{
+            position: absolute;
+            right: 12px;
+            top: 34%;
+        }
+    }
+    .perfume-mujer{
+        width: 60%;
+        .perfume-mujer-list{
+            @include mixin.flex-center;
+            width: 90%;
+            justify-content: end;
+            gap: 30px;
+            font-size: 16px;
+            list-style: none;
+            .perfume-mujer-link{
+                text-decoration: none;
+                padding: 5px;
+                margin-top: 20px;
+                color: rgb(0, 0, 0);
+                &.activo{
+                    border-bottom: 2px solid #f95ae4;
+                }
+                &:hover{
+                    text-decoration: rgb(225, 103, 244) 2px underline;
+                }
+            }
+        }
+    }
+
+.formula{
+    position: relative;
+        .bi-mujer{
+            position: absolute;
+            right: 12px;
+            top: 34%;
+        }
+    }
+
+.dropdown .dropdown-menu .dropdown-item:hover{
+        background-color: rgba(225, 52, 252, 0.221);
+}
+
+    @media screen and (max-width: 550px){
+        .dropdown{
+            display: block;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+        .perfume-mujer{
+            display: none !important;
+        }
+    }
+
+
+.formula{
+    position: relative;
+        .bi-mujer{
+            position: absolute;
+            right: 12px;
+            top: 34%;
+        }
+    }
+
+
+.buscar-mujer{
+    background-color:#430248;
     color: #fff;
     border: none;
     padding: 5px;

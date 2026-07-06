@@ -21,4 +21,11 @@
         object-fit: cover;
 }
 
-
+.imagen-mujer{
+    width: 100%;
+    @include mixin.flex-center;
+    .img-mujer{
+        width: 100%;
+        object-fit: cover;
+    }
+}
