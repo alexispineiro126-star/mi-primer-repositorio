@@ -64,6 +64,23 @@
         border-left: 2px solid rgb(138, 4, 228);
     } 
 }
+@media screen and (max-width: 600px){
+    .caja-tarjetas{
+        @include mixin.flex-center;
+        width: 100%;
+        height: 500px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .sin-tarjeta,.tarjeta{
+        border-bottom: 2px solid rgb(138, 4, 228);
+        border-left: none !important;
+        width: 80%;
+        max-width: 300px;
+        flex-direction: column;
+        align-items: center;
+    }
+}
 .texto-tarjeta{
     text-align: center;
     font-size: 18px;
@@ -84,25 +101,6 @@
     padding: 10px;
     text-align: center;
 }
-
-@media screen and (max-width: 600px){
-    .caja-tarjetas{
-        @include mixin.flex-center;
-        width: 100%;
-        height: 500px;
-        flex-direction: column;
-        align-items: center;
-    }
-    .sin-tarjeta,.tarjeta{
-        width: 80%;
-        max-width: 300px;
-        flex-direction: column;
-        align-items: center;
-        border: 2px solid rgb(138, 4, 228);
-    }
-}
-
-
 
 
 //pagina de servicios
@@ -167,7 +165,6 @@
         width: 100%;
         flex-direction: column;
         align-items: center;
-        border: 2px solid rgb(38, 37, 37);
     }
 }
 
