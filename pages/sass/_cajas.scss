@@ -116,7 +116,7 @@
         flex: 1 1 220px;
         max-width: 350px;
         margin: 0;
-        border-left: 2px solid rgb(38, 37, 37);
+        border-left: 2px variables.$yellow-accent solid;
     }
     .none{
         flex: 1 1 220px;
@@ -127,7 +127,7 @@
 .bi{
     display: block;
     text-align: center;
-    font-size: 40px;
+    font-size: 35px;
     color: rgb(255, 234, 0);
 }
 .logo{
@@ -162,6 +162,8 @@
 
     .separacion,
     .none{
+        border-left: none !important;
+        border-bottom: 1px variables.$yellow-accent solid;
         width: 100%;
         flex-direction: column;
         align-items: center;
@@ -171,26 +173,58 @@
 //paginas de hombres
 .hombres{
     display: flex;
+    background-color: rgb(1, 9, 43);
     flex-direction: column;
 }
 .titulo-hombre{
     text-align: center;
+    color: white;
 }
 .caja-hombres{
     width: 100%;
-    @include mixin.flex-center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     .perfume-hombres{
         @include mixin.flex-center;
+        border-radius: 20px;
         align-items: center;
         flex-direction: column;
+        background-color: rgb(0, 3, 16);
         max-width: 300px;
-        margin: 10px;
+        margin: 5px;
     }
     .perfume-hombre-img{
+        border-radius: 10px 10px 0 0;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 250px;
+        display: block;
         object-fit: cover;
-        min-width: 300px;
-        max-height: 300px;
+        object-position: center;
+    }
+    .nombre-perfume{
+        color: rgb(255, 255, 255);
+        text-align: center;
+    }
+    .descripcion-perfume{
+        color: rgb(255, 255, 255);
+        text-align: center;
+    }
+    .precio-perfume{
+        color: rgb(255, 255, 255);
+        text-align: center;
+    }
+    .ofertas{
+        color: rgb(255, 0, 0);
+        text-decoration: line-through;
+        margin-left: 10px;
+        font-size: 12px;
+    }
+    .cuotas{
+        color: rgb(255, 255, 255);
+        text-align: center;
+        font-size: 12px;
     }
     .comprar-hombres{
         border-radius: 10px;
@@ -201,9 +235,28 @@
     }
 }
 
+
 @media screen and (max-width: 850px){
     .caja-hombres{
         flex-direction: column;
         align-items: center;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .nombre-perfume{
+        font-size: 14px;
+    }
+    .descripcion-perfume{
+        font-size: 10px;
+    }
+    .precio-perfume{
+        font-size: 10px;
+    }
+    .ofertas{
+        font-size: 8px;
+    }
+    .cuotas{
+        font-size: 8px;
     }
 }

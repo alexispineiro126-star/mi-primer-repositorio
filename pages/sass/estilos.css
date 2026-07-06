@@ -684,7 +684,7 @@
   flex: 1 1 220px;
   max-width: 350px;
   margin: 0;
-  border-left: 2px solid rgb(38, 37, 37);
+  border-left: 2px rgb(215, 222, 13) solid;
 }
 .caja-perfumes .none {
   flex: 1 1 220px;
@@ -695,7 +695,7 @@
 .bi {
   display: block;
   text-align: center;
-  font-size: 40px;
+  font-size: 35px;
   color: rgb(255, 234, 0);
 }
 
@@ -732,6 +732,8 @@
   }
   .separacion,
   .none {
+    border-left: none !important;
+    border-bottom: 1px rgb(215, 222, 13) solid;
     width: 100%;
     flex-direction: column;
     align-items: center;
@@ -739,34 +741,65 @@
 }
 .hombres {
   display: flex;
+  background-color: rgb(1, 9, 43);
   flex-direction: column;
 }
 
 .titulo-hombre {
   text-align: center;
+  color: white;
 }
 
 .caja-hombres {
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 }
 .caja-hombres .perfume-hombres {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 20px;
   align-items: center;
   flex-direction: column;
+  background-color: rgb(0, 3, 16);
   max-width: 300px;
-  margin: 10px;
+  margin: 5px;
 }
 .caja-hombres .perfume-hombre-img {
+  border-radius: 10px 10px 0 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 250px;
+  display: block;
   -o-object-fit: cover;
      object-fit: cover;
-  min-width: 300px;
-  max-height: 300px;
+  -o-object-position: center;
+     object-position: center;
+}
+.caja-hombres .nombre-perfume {
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+.caja-hombres .descripcion-perfume {
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+.caja-hombres .precio-perfume {
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+.caja-hombres .ofertas {
+  color: rgb(255, 0, 0);
+  text-decoration: line-through;
+  margin-left: 10px;
+  font-size: 12px;
+}
+.caja-hombres .cuotas {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 12px;
 }
 .caja-hombres .comprar-hombres {
   border-radius: 10px;
@@ -780,6 +813,23 @@
   .caja-hombres {
     flex-direction: column;
     align-items: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  .nombre-perfume {
+    font-size: 14px;
+  }
+  .descripcion-perfume {
+    font-size: 10px;
+  }
+  .precio-perfume {
+    font-size: 10px;
+  }
+  .ofertas {
+    font-size: 8px;
+  }
+  .cuotas {
+    font-size: 8px;
   }
 }
 .boton {
@@ -837,13 +887,15 @@
 
 @media screen and (max-width: 600px) {
   .boton {
-    left: 110px;
-    top: 60%;
+    left: 100px;
+    top: 65%;
+    font-size: 10px;
   }
 }
 @media screen and (max-width: 600px) {
   .boton-violet {
-    top: 60%;
+    top: 65%;
+    font-size: 10px;
   }
 }
 .perfume {
