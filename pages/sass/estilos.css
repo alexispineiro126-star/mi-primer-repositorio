@@ -409,7 +409,6 @@
 }
 
 .footer {
-  margin-top: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -420,7 +419,7 @@
   color: antiquewhite;
 }
 .footer .cajass-footer {
-  min-width: 400px;
+  max-width: 400px;
   padding-left: 20px;
   display: flex;
   flex: 1;
@@ -433,25 +432,35 @@
 }
 .footer .cajass-footer .logo {
   display: block;
-  margin: auto;
+  margin: 0;
   width: 64px;
   height: 64px;
 }
 
 .copy {
+  width: 100%;
   text-align: center;
+  align-self: center;
   font-size: 14px;
   padding-top: 30px;
 }
 
 @media screen and (max-width: 600px) {
-  .footeralto-inicio {
+  .footer {
     width: 100%;
+    display: flex;
     flex-direction: column;
   }
-  .footer-inicio .inicio-footer {
+  .cajass-footer {
     width: 100%;
     min-width: 0;
+    padding-left: 0;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .cajass-footer:first-child {
+    align-items: center;
+    text-align: center;
   }
 }
 .listas {
@@ -465,9 +474,39 @@
   color: white;
 }
 
+.iconos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.iconos .itemn {
+  padding: 10px;
+  align-items: center;
+}
+.iconos .itemn .inicio {
+  color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+  .peque {
+    font-size: 14px;
+  }
+  .listas {
+    font-size: 16px;
+  }
+}
 .p {
   font-size: 14px;
   text-align: center;
+}
+
+.footer .cajass-footer:last-child, .footeralto .caja-footer:last-child, .footeralto-hombre .hombre-footer:last-child, .footeralto-mujeres .mujeres-footer:last-child {
+  flex: 0 0 100%;
+  max-width: 100%;
+  width: 100%;
 }
 
 .body {
@@ -487,7 +526,7 @@
   color: antiquewhite;
 }
 .footeralto .caja-footer {
-  min-width: 400px;
+  max-width: 400px;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -516,6 +555,14 @@
   align-self: flex-start;
 }
 
+.copy {
+  flex: 0 0 100%;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  padding-top: 30px;
+}
+
 .enviar {
   background-color: rgb(215, 222, 13);
   cursor: pointer;
@@ -525,12 +572,6 @@
   padding: 5px;
   margin: auto;
   border-radius: 10px;
-}
-
-.copy {
-  text-align: center;
-  font-size: 14px;
-  padding-top: 30px;
 }
 
 @media screen and (max-width: 600px) {
@@ -596,7 +637,7 @@
   color: antiquewhite;
 }
 .footeralto-hombre .hombre-footer {
-  min-width: 400px;
+  max-width: 400px;
   padding-left: 20px;
   display: flex;
   flex: 1;
@@ -615,6 +656,7 @@
 }
 
 .copy {
+  width: 100%;
   text-align: center;
   font-size: 14px;
   padding-top: 30px;
@@ -641,41 +683,38 @@
   color: white;
 }
 
+@media screen and (max-width: 600px) {
+  .peque {
+    font-size: 14px;
+  }
+  .listas {
+    font-size: 16px;
+  }
+}
 .p {
   font-size: 14px;
   text-align: center;
 }
 
 .footeralto-mujeres {
+  margin-top: 30px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #3f163d;
+  background-color: rgb(44, 0, 31);
   width: 100%;
   justify-content: space-evenly;
   flex-wrap: wrap;
   color: antiquewhite;
 }
-.footeralto-mujeres .footer-mujer {
-  min-width: 400px;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  margin-top: 10px;
-}
 .footeralto-mujeres .mujeres-footer {
-  min-width: 400px;
-  padding-left: 20px;
+  max-width: 400px;
   display: flex;
   flex: 1;
   flex-direction: column;
   margin-top: 10px;
 }
-.footeralto-mujeres .mujeres-footer .bi-mujeres {
-  margin: 0;
-  color: white;
+.footeralto-mujeres .mujeres-footer .bi-mujer {
+  text-align: center;
+  color: rgb(255, 255, 255);
 }
 .footeralto-mujeres .mujeres-footer .logo {
   display: block;
@@ -685,7 +724,10 @@
 }
 
 .copy {
+  flex: 0 0 100%;
+  width: 100%;
   text-align: center;
+  align-self: center;
   font-size: 14px;
   padding-top: 30px;
 }
@@ -693,11 +735,26 @@
 @media screen and (max-width: 600px) {
   .footeralto-mujeres {
     width: 100%;
+    display: flex;
     flex-direction: column;
   }
-  .footeralto-mujer .mujer-footer {
+  .footeralto-mujeres .mujeres-footer {
     width: 100%;
     min-width: 0;
+    padding-left: 0;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .footeralto-mujeres .mujeres-footer:first-child {
+    align-items: center;
+    text-align: center;
+  }
+  .footeralto-mujeres .mujeres-footer:first-child .iconos {
+    justify-content: center;
+    width: 100%;
+  }
+  .footeralto-mujeres .mujeres-footer:first-child .fragancia {
+    text-align: center;
   }
 }
 .listas {
@@ -708,7 +765,7 @@
   padding: 0;
 }
 .listas .bi-mujer {
-  color: rgb(0, 0, 0);
+  color: white;
 }
 
 .p {
