@@ -144,11 +144,11 @@
             }
         }
     }
-
     .dropdown .dropdown-menu .dropdown-item:hover{
         background-color: variables.$dark-yellow-bg;
     }
 }
+
 
 //pagina de hombres
 
@@ -196,25 +196,9 @@
                 &.activo{
                     border-bottom: 2px solid #1653ce;
                 }
-                &:hover,
-                &:focus-visible{
-                    text-decoration: underline 2px solid #1653ce !important;
-                    color: #1653ce !important;
-                }
             }
         }
-    }
-.dropdown .dropdown-menu .dropdown-item:hover{
-        background-color: rgba(73, 103, 255, 0.221);
 }
-.formu{
-    position: relative;
-        .bi-servicios{
-            position: absolute;
-            right: 12px;
-            top: 34%;
-        }
-    }
 
 
     @media screen and (max-width: 550px){
@@ -230,7 +214,7 @@
     }
 
 
-.formu{
+.form-hombre{
     position: relative;
         .bi-hombre{
             position: absolute;
@@ -238,7 +222,6 @@
             top: 34%;
         }
     }
-
 
 .buscar{
     background-color:#b2c5ff;
@@ -355,5 +338,89 @@
 .unisex{
     display: flex;
     flex-direction: column;
+}
+
+.nav-unisex{
+    background-color: rgb(250, 244, 233);
+    position: sticky;
+    top: 0;
+    min-width: 98vw;
+    z-index: 10;
+    @include mixin.flex-center;
+    }
+    .perfume-unisex{
+        width: 60%;
+        .perfume-unisex-list{
+            @include mixin.flex-center;
+            width: 90%;
+            justify-content: end;
+            gap: 30px;
+            color: #000;
+            font-size: 16px;
+            list-style: none;
+            .perfume-unisex-link{
+                padding: 5px;
+                color: #000;
+                margin-top: 20px;
+                text-decoration:none;
+                &.activo{
+                    border-bottom: 2px solid  rgb(230, 204, 156);
+                }
+                &:hover{
+                    text-decoration: rgb(8, 8, 8) 2px underline;
+                }
+            }
+        }
+    }
+
+    .dropdown{
+        display: none;
+        margin: 10px;
+        .dropdown-menu{
+            background-color: #000;
+        }
+        .unisex{
+            background-color: #f3d5a1;
+        }
+        
+            .dropdown-item{
+                color: rgb(12, 10, 10);
+            }
+
+                &:hover{
+                    padding: 5px;
+                    color: rgb(18, 18, 18);
+                }
+            }
+
+    @media screen and (max-width: 550px){
+        .dropdown{
+            display: block;
+            position: absolute;
+            top: 0px; 
+            right: 0px;
+        }
+        .nav-unisex .perfume-unisex {
+            display: none !important;
+        }
+    }
+
+.form-unisex{
+    position: relative;
+        .bi-unisex{
+            position: absolute;
+            right: 12px;
+            top: 34%;
+        }
+    }
+
+
+.buscar-unisex{
+    background-color:#fce8b3;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    margin: 20px 10px;
+    border-radius: 10px;
 }
 
