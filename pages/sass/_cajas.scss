@@ -448,3 +448,42 @@
         font-size: 8px;
     }
 }
+
+.tarjetas-unisex{
+    margin-top: 30px;
+    width: 100%;
+    height: auto;
+    @include mixin.flex-center;
+    justify-content: space-around;
+    .unisex-tarjeta{
+        max-width:250px;
+        height: 300px;
+    } 
+    .unisex-img{
+        width:100%;
+        margin-top: 10px;
+        height:80%;
+        object-fit: contain;
+        object-fit: cover;
+    }
+    .aromas{
+        text-align: center;
+    }
+}
+@media screen and (max-width: 600px){
+    .tarjetas-unisex{
+        @include mixin.flex-center;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+    .sin-unisex,.unisex-tarjeta{
+        flex-direction: column;
+    }
+}
+.texto-tarjeta{
+    text-align: center;
+    font-size: 18px;
+    color: rgb(152, 20, 247);
+}
